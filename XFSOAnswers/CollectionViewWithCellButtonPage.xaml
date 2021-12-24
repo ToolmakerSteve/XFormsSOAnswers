@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSOAnswers.CollectionViewWithCellButtonPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView
+                x:Name="contactsList"
+                ItemsSource="{Binding Contacts}"
+                SelectionMode="Single"
+                SelectedItem="{Binding SelectedContact, Mode=TwoWay}"
+                ItemSizingStrategy="MeasureAllItems" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<SwipeView>-->
+                            <StackLayout>
+                                <Grid
+                                Padding="0,15,0,10"
+                                ColumnDefinitions="*,80">
+                                    <Label Grid.Column="0" Text="abcdef" />
+                                    <Button
+                                    Grid.Column="1"
+                                    Padding="4"
+                                    Text="Press Me"
+                                    Clicked="Button_Clicked"
+                                    />
+                                </Grid>
+                            </StackLayout>
+                        <!--</SwipeView>-->
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

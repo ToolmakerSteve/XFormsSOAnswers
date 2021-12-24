@@ -53,18 +53,19 @@ namespace XFSOAnswers
 			//MainPage = new EvenlySpaceItemsScrolling();
 
 			//MainPage = new MyAbsoluteLayoutPage();
-			MainPage = new StartPage();
+			//MainPage = new StartPage();
+			MainPage = new CollectionViewWithCellButtonPage();
 		}
 
 		private void Test()
 		{
 			//UnionStruct.Test1();
 
-			Device.BeginInvokeOnMainThread(async () =>
-			{
-				await System.Threading.Tasks.Task.Delay(200);
-				var names = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames();
-			});
+			//Device.BeginInvokeOnMainThread(async () =>
+			//{
+			//	await System.Threading.Tasks.Task.Delay(200);
+			//	var names = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames();
+			//});
 		}
 
 		//private string _SearchText;
