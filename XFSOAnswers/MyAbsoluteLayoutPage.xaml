@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFSOAnswers"
+             x:Class="XFSOAnswers.MyAbsoluteLayoutPage">
+    <ContentPage.Content>
+        <local:MyAbsoluteLayout x:Name="TheLayout">
+            <!-- Layout positions start (0,0). Adjusted later in PositionLabels. -->
+            <Label x:Name="Label1" Text="Welcome" />
+            <Label x:Name="Label2" Text="to" />
+            <Label x:Name="Label3" Text="Xamarin" />
+            <Label x:Name="Label4" Text=".Forms!" />
+        </local:MyAbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

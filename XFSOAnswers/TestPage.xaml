@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:local="clr-namespace:XFSOAnswers"
+             x:DataType="local:TestPage"
+             ios:Page.UseSafeArea="true"
+             x:Class="XFSOAnswers.TestPage">
+    <ContentPage.Content>
+        <!--<StackLayout>
+            <Entry x:Name="MyEntry" Text="" Placeholder="Scanner text appears here"  TextColor="Black" FontSize="24"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" InputTransparent="False" />
+        </StackLayout>-->
+        <CollectionView x:Name="ItemsListView" ItemsSource="{Binding Data}" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="local:MyTuple">
+                    <StackLayout>
+                        <!-- Item 1 = UserAnswer -->
+                        <Label Text="{Binding Item1}"/>
+                        <!-- Item 2 = CorrectAnswer -->
+                        <Label Text="{Binding Item2}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>

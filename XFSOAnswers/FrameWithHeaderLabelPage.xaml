@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSOAnswers.FrameWithHeaderLabelPage">
+    <ContentPage.Content>
+        <!-- Derived from https://stackoverflow.com/a/60700816/199364 -->
+        <!-- Top padding "10": Must be at least as large as negative "TranslationY" on the label. -->
+        <Grid RowDefinitions="Auto" Padding="1,10,1,1" Margin="12">
+            <Frame Grid.Row="0" CornerRadius="8" BorderColor="Blue" HasShadow="False" Padding="10,20">
+                <BoxView HeightRequest="200"/>
+            </Frame>
+            <!-- Label in middle of top line of Frame. -->
+            <StackLayout TranslationY="-10" VerticalOptions="Start" HorizontalOptions="Center">
+                <Label Text="{Binding HeaderText}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       Padding="10,0,10,0" TextColor="Blue" BackgroundColor="White"/>
+           </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

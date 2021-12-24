@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+                 xmlns:local="clr-namespace:XFSOAnswers"
+                 x:Class="XFSOAnswers.TwoLayoutPage">
+    <ContentPage.BindingContext>
+        <local:TwoLayoutViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:InvertedBoolConverter x:Key="InvertedBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout 
+                    IsVisible="{Binding UseSecondLayout, Converter={StaticResource InvertedBoolConverter}}"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label Text="First Layout" FontSize="20" />
+                <Button Text="To Second" Command="{Binding SwitchToSecondLayoutCommand}" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding UseSecondLayout}"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label Text="Second Layout!" FontSize="32" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

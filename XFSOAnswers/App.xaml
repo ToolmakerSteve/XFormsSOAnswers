@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="XFSOAnswers.App">
+    <Application.Resources>
+		<Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+			<Setter Property="ios:Page.UseSafeArea" Value="True"/>
+		</Style>
+        <!--<x:Double x:Key="MyFontSize">0</x:Double>-->
+    </Application.Resources>
+</Application>

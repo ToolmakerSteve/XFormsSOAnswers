@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:XFSOAnswers"
+             x:Class="XFSOAnswers.TextValidationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Lastname" Text="{Binding Lastname}">
+                <Entry.Behaviors>
+                    <xct:TextValidationBehavior MinimumLength="3" MaximumLength="10"
+                     Flags="ValidateOnAttaching" IsValid="{Binding IsLastnameValid}"/>
+                </Entry.Behaviors>
+            </Entry>
+
+            <Entry Placeholder="Firstname" Text="{Binding Firstname}">
+                <Entry.Behaviors>
+                    <xct:TextValidationBehavior MinimumLength="3" MaximumLength="10"
+                     Flags="ValidateOnAttaching" IsValid="{Binding IsFirstnameValid}"/>
+                </Entry.Behaviors>
+            </Entry>
+
+            <Button Text="Save" Clicked="OnSave">
+                <Button.IsEnabled>
+                    <MultiBinding  Converter="{StaticResource BooleanAndConverter}">
+                        <Binding Path="IsLastnameValid"/>
+                        <Binding Path="IsFirstnameValid"/>
+                    </MultiBinding>
+                </Button.IsEnabled>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

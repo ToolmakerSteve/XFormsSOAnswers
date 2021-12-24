@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             x:Class="XFSOAnswers.NestedScrollGrid">
+	<!--<Grid RowDefinitions="Auto,Auto,*">
+		<Rectangle Grid.Row="0" Fill="Red" WidthRequest="500" HeightRequest="300" HorizontalOptions="Start" />
+		<RelativeLayout Grid.Row="1" .../>
+		<ScrollView Grid.Row="2" VerticalOptions="FillAndExpand" Padding="0" HorizontalOptions="FillAndExpand" Margin="0" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}" RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=15}">
+			<Grid ...</Grid>
+		</ScrollView>
+	</Grid>-->
+	<ContentPage.Resources>
+		<Style TargetType="Label">
+			<Setter Property="FontSize" Value="24"/>
+		</Style>
+	</ContentPage.Resources>
+	<Grid RowDefinitions="1*, 1*, 1*, 7*" ColumnDefinitions="25*,5*,70*"
+		  RowSpacing="0" ColumnSpacing="0" HorizontalOptions="Fill" VerticalOptions="Fill">
+		<Label Grid.Row="0" Grid.Column="0" Text="Test 00" BackgroundColor="Blue" />
+		<Label Grid.Row="0" Grid.Column="1" Text="01" BackgroundColor="Green" />
+		<Label Grid.Row="0" Grid.Column="2" Text="Test 02" BackgroundColor="Red" />
+
+		<Label Grid.Row="1" Grid.Column="0" Text="Test 10" BackgroundColor="Yellow" />
+		<Label Grid.Row="1" Grid.Column="1" Text="11" />
+		<Label Grid.Row="1" Grid.Column="2" Text="Test 12" />
+
+		<Label Grid.Row="2" Grid.Column="0" Text="Test 20" BackgroundColor="Orange" />
+		<Label Grid.Row="2" Grid.Column="1" Text="21" />
+		<Label Grid.Row="2" Grid.Column="2" Text="Test 22" />
+
+		<Label Grid.Row="3" Grid.Column="0" Text="Test 30" BackgroundColor="Blue" />
+		<Label Grid.Row="3" Grid.Column="1" Text="31" BackgroundColor="Green" />
+		<Label Grid.Row="3" Grid.Column="2" Text="Test 32" BackgroundColor="Red" />
+	</Grid>
+</ContentPage>

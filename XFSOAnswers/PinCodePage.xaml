@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSOAnswers.PinCodePage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="NumberCommand" CommandParameter="1"/>
+            </StackLayout.GestureRecognizers>
+            <Label HorizontalOptions="Center" VerticalOptions="EndAndExpand"  Text="1"  FontSize="Title" FontAttributes="Bold" TextColor="Black" BackgroundColor="Pink"></Label>
+            <Label HorizontalOptions="Center" VerticalOptions="EndAndExpand" Text=" " FontSize="Small" TextColor="Black" BackgroundColor="Yellow"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSOAnswers.EvenlySpaceItems">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" VerticalOptions="Center"
+              RowDefinitions="44" ColumnDefinitions="44,*,44">
+            <BoxView Color="Red" Grid.Row="0" Grid.Column="0"/>
+            <BoxView Color="Red" Grid.Row="0" Grid.Column="2"/>
+            <CollectionView Grid.Row="0" Grid.Column="1" x:Name="clv" ItemsSource="{Binding ImagesArray}" 
+                            ItemsLayout="VerticalGrid, 5" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="*,Auto,*">
+                            <BoxView Grid.Column="1" WidthRequest="40" Color="Blue" VerticalOptions="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

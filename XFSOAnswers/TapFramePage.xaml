@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSOAnswers.TapFramePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame x:Name="SearchFrame"
+               BackgroundColor="#0c0c0c"
+               HasShadow="False">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label TextColor="White"
+                   Text="Search place by name"
+                   HorizontalTextAlignment="Start"
+                   Grid.Column="1" />
+                </Grid>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="Search_Tapped">
+                    </TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
