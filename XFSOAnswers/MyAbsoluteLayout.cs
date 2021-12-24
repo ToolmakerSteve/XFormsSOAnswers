@@ -9,28 +9,29 @@ namespace XFSOAnswers
 		{
 		}
 
-		// Containing page will set this, to act on children after LayoutChildren.
-		public Action MeasureAction { get; set; }
+		// Containing page will set this, to act on children during LayoutChildren.
+		public Action CustomLayoutAction { get; set; }
 
 		private bool _busy;
 
 		protected override void LayoutChildren(double x, double y, double width, double height)
 		{
-			// Avoid recursed layout calls as MeasureAction moves children.
+			// Avoid recursed layout calls as CustomLayoutAction moves children.
 			if (_busy)
 				return;
 
+			// Xamarin measures the children.
 			base.LayoutChildren(x, y, width, height);
 
 			_busy = true;
 			try
 			{
-				MeasureAction?.Invoke();
+				CustomLayoutAction?.Invoke();
 			}
 			finally
 			{
 				_busy = false;
-				// Layout again, now that all children have been positioned.
+				// Layout again, to position the children, based on adjusted (x,y)s.
 				base.LayoutChildren(x, y, width, height);
 			}
 		}

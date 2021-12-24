@@ -10,12 +10,14 @@ namespace XFSOAnswers
 		{
 			InitializeComponent();
 
-			TheLayout.MeasureAction = PositionLabels;
+			TheLayout.CustomLayoutAction = PositionLabels;
 		}
 
 		private void PositionLabels()
 		{
-			// Manually check that the bounds have values.
+			var theme = Application.Current.UserAppTheme;
+
+			// Optional: Set breakpoint after these, to check that the bounds have values.
 			var bounds1 = Label1.Bounds;
 			var bounds2 = Label2.Bounds;
 			var bounds3 = Label3.Bounds;

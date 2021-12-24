@@ -10,20 +10,35 @@ namespace XFSOAnswers
     public partial class App : Application
     {
         public App()
-        {
-            InitializeComponent();
+		{
+			InitializeComponent();
 			//Sharpnado.Tabs.Initializer.Initialize(false, false);
 
 			//var fontsize = Application.Current.Resources["MyFontSize"];
 			//Application.Current.Resources["MyFontSize"] = 50.0;
 
-			//MainPage = new MainPage();
-			//MainPage = new NestedScrollGrid();
-			//MainPage = new TwoLayoutPage();
 			//MainPage = MyPage1.It;
 			//LoadMyPage(50.0);
 			//ReloadMyPageDeferred(25.0, 3);
 			//ReloadMyPageDeferred(10.0, 6);
+
+			//ForceLightTheme();
+			SetStartPage();
+		}
+
+		public static void ForceLightTheme()
+		{
+			var theme = Application.Current.UserAppTheme;
+			Application.Current.UserAppTheme = OSAppTheme.Light;
+			var theme2 = Application.Current.UserAppTheme;
+		}
+
+		public void SetStartPage()
+		{
+			//MainPage = new MainPage();
+			//MainPage = new NestedScrollGrid();
+			//MainPage = new TwoLayoutPage();
+
 			//MainPage = new AbsoluteLayoutPage();
 			//MainPage = new SoftKeyboardEntryPage();
 			//MainPage = new TestPage();
@@ -37,7 +52,8 @@ namespace XFSOAnswers
 			//MainPage = new EvenlySpaceItems();
 			//MainPage = new EvenlySpaceItemsScrolling();
 
-			MainPage = new MyAbsoluteLayoutPage();
+			//MainPage = new MyAbsoluteLayoutPage();
+			MainPage = new StartPage();
 		}
 
 		private void Test()

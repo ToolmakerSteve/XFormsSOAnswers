@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSOAnswers.StartPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Set Light Theme" Command="{Binding Button1Command}" />
+            <Button Text="Go to Page" Command="{Binding Button2Command}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
