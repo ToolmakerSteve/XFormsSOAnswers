@@ -17,7 +17,11 @@ namespace XFSOAnswers
 		{
 			InitializeComponent();
 			BindingContext = this;
+		}
 
+		protected override void OnAppearing()
+		{
+			base.OnAppearing();
 
 			// Make sure _suppressSelection can't get "stuck on".
 			_buttonTimer = new System.Timers.Timer { Interval = 500, AutoReset = false };
@@ -80,7 +84,12 @@ namespace XFSOAnswers
 		{
 			await Task.Delay(100);
 			if (_suppressSelection)
+			{
+				// Button was pressed. DO NOTHING - DON'T select the item.
+
+				// Clear state for next time.
 				_suppressSelection = false;
+			}
 			else
 			{
 				_selectedContact = value;
