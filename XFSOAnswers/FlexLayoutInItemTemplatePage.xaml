@@ -13,8 +13,8 @@
                         Wrap="Wrap" BackgroundColor="LightGreen" >
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
-                            <local:LabelImproveMeasure FontSize="Small" Text="{Binding .}"
-                                           LineBreakMode="NoWrap" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,0,0" Padding="0"/>
+                            <local:LabelImproveMeasure HeightRequest="20" FontSize="Small" Text="{Binding .}"
+                                           LineBreakMode="NoWrap" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,10,0" Padding="0"/>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                 </local:FlexLayoutImproveMeasure>
@@ -29,22 +29,20 @@
             </CollectionView.ItemsLayout>-->
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout>
-                            <!--<Frame CornerRadius="10" BorderColor="Black"
+                        <!--<Frame CornerRadius="10" BorderColor="Black"
                            BackgroundColor="LightBlue" Padding="10">-->
-                            <local:FlexLayoutImproveMeasure
+                        <local:FlexLayoutImproveMeasure
                                 Wrap="Wrap"
                                 BindableLayout.ItemsSource="{Binding Items2}"
                                 BackgroundColor="LightGray" >
-                                <BindableLayout.ItemTemplate>
-                                    <DataTemplate>
-                                        <local:LabelImproveMeasure FontSize="Small" Text="{Binding .}"
-                                           LineBreakMode="NoWrap" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,0,0" Padding="0"/>
-                                    </DataTemplate>
-                                </BindableLayout.ItemTemplate>
-                            </local:FlexLayoutImproveMeasure>
-                            <!--</Frame>-->
-                        </StackLayout>
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <local:LabelImproveMeasure FontSize="Small" Text="{Binding .}"
+                                           LineBreakMode="NoWrap" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,10,0" Padding="0"/>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </local:FlexLayoutImproveMeasure>
+                        <!--</Frame>-->
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
