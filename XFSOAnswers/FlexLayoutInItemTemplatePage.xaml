@@ -3,12 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XFSOAnswers.FlexLayoutInItemTemplatePage">
     <ContentPage.Content>
-        <CollectionView ItemsSource="{Binding Items}">
+        <CollectionView ItemsSource="{Binding Items}"
+                        WidthRequest="200" HorizontalOptions="Center"
+                        Margin="20" >
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                       ItemSpacing="10" />
+            </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout>
-                        <Label Text="Test" />
-                    </StackLayout>
+                    <Frame CornerRadius="10" BorderColor="Black"
+                           BackgroundColor="LightBlue" Padding="10">
+                        <FlexLayout BindableLayout.ItemsSource="{Binding Items2}"
+                                >
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <Label FontSize="Small" Text="{Binding .}" VerticalOptions="CenterAndExpand" Margin="0,0,10,0" Padding="0"/>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </FlexLayout>
+
+                   </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

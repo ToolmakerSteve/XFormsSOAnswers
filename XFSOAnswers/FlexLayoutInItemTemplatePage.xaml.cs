@@ -18,7 +18,18 @@ namespace XFSOAnswers
 			BindingContext = this;
 		}
 
-		public List<string> Items { get; } = new List<string> { "aaa", "bbbb", "cc" };
+		public List<ListModel> Items { get; } = new List<ListModel> {
+			new ListModel(),
+			new ListModel(),
+			new ListModel(),
+			new ListModel(),
+		};
+	}
 
+
+	public class ListModel
+	{
+		public List<string> Items2 { get; } = new List<string> {
+			"aaa", "bbbbbbbbb", "cc", "ddddd", "eeee", "fff" };
 	}
 }
