@@ -20,16 +20,16 @@ namespace XFSOAnswers
 
 		public List<ListModel> Items { get; } = new List<ListModel> {
 			new ListModel(),
-			new ListModel(),
-			new ListModel(),
-			new ListModel(),
 		};
+
+		public List<string> Items3 { get; } = new List<string> {
+			"aaa", "bbbbbbbbb", "cc", "ddddd", "eeee", "fff", "ggggg", "hhhhhhh" };
 	}
 
 
 	public class ListModel
 	{
 		public List<string> Items2 { get; } = new List<string> {
-			"aaa", "bbbbbbbbb", "cc", "ddddd", "eeee", "fff" };
+			"aaa", "bbbbbbbbb", "cc", "ddddd", "eeee", "fff", "ggggg", "hhhhhhh" };
 	}
 }
