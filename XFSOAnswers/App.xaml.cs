@@ -54,7 +54,8 @@ namespace XFSOAnswers
 
 			//MainPage = new MyAbsoluteLayoutPage();
 			//MainPage = new StartPage();
-			MainPage = new CollectionViewWithCellButtonPage();
+			//MainPage = new CollectionViewWithCellButtonPage();
+			MainPage = new FlexLayoutInItemTemplatePage();
 		}
 
 		private void Test()
