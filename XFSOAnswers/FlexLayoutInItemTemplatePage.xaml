@@ -5,7 +5,7 @@
              x:Class="XFSOAnswers.FlexLayoutInItemTemplatePage">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout HeightRequest="60" WidthRequest="200" HorizontalOptions="Center">
+            <StackLayout WidthRequest="200" HorizontalOptions="Center">
                 <!--<Frame CornerRadius="10" BorderColor="Black"
                            BackgroundColor="LightBlue" Padding="10">-->
                 <local:FlexLayoutImproveMeasure
@@ -29,7 +29,7 @@
             </CollectionView.ItemsLayout>-->
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout HeightRequest="60">
+                        <StackLayout>
                             <!--<Frame CornerRadius="10" BorderColor="Black"
                            BackgroundColor="LightBlue" Padding="10">-->
                             <local:FlexLayoutImproveMeasure

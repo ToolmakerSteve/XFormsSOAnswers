@@ -8,9 +8,9 @@ namespace XFSOAnswers
 		{
 			var size = base.OnMeasure(widthConstraint, heightConstraint);
 
-			if (widthConstraint == double.PositiveInfinity)
-				// Force the minimum to always be the full size.
-				size = new SizeRequest(size.Request, size.Request);
+			//if (widthConstraint == double.PositiveInfinity)
+			//	// Force the minimum to always be the full size.
+			//	size = new SizeRequest(size.Request, size.Request);
 
 			return size;
 		}
