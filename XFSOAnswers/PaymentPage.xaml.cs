@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,7 +8,7 @@ namespace XFSOAnswers
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class PaymentPage : ContentPage
 	{
-		public static int subtotal = 123;
+		//public static int subtotal = 123;
 
 
 
@@ -23,25 +19,34 @@ namespace XFSOAnswers
 
 			MessagingCenter.Subscribe<PaymentCalc, int>(this, "NewSubTotal", (sender, value) =>
 			{
-				OnNewSubTotal(value);
+				Subtotal = value;
 			});
 
 			TEST_DeferredSubtotalCalc();
 		}
 
-		public int subtotalProxy => subtotal;
-
-		private void OnNewSubTotal(int value)
+		//public int subtotalProxy => subtotal;
+		public int Subtotal
 		{
-			subtotal = value;
-			OnPropertyChanged(nameof(subtotalProxy));
+			get => _subtotal;
+			set
+			{
+				_subtotal = value;
+				OnPropertyChanged();
+			}
 		}
+		private int _subtotal;
+
+		//private void OnNewSubTotal(int value)
+		//{
+		//	Subtotal = value;
+		//}
 
 		private void TEST_DeferredSubtotalCalc()
 		{
 			Device.BeginInvokeOnMainThread(async () =>
 			{
-				await Task.Delay(1000);
+				await Task.Delay(2000);
 				PaymentCalc.DoCalc();
 			});
 		}

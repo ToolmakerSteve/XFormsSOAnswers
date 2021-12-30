@@ -4,7 +4,7 @@
              x:Class="XFSOAnswers.PaymentPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding subtotalProxy}"
+            <Label Text="{Binding Subtotal}"
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
