@@ -21,13 +21,6 @@ namespace XFSOAnswers
 		public List<ListModel> Items { get; } = new List<ListModel> {
 			new ListModel(),
 			new ListModel(),
-			new ListModel(),
-		};
-
-		public List<string> Items3 { get; } = new List<string> {
-			"aaa", "bbbbbbbbb", "cc", "dddd",
-			"e",
-			//"fff", "ggggg", "hhhhhhh"
 		};
 	}
 
@@ -37,7 +30,6 @@ namespace XFSOAnswers
 		public List<string> Items2 { get; } = new List<string> {
 			"aaa", "bbbbbbbbb", "cc", "dddd",
 			"e",
-			//"fff", "ggggg", "hhhhhhh"
 		};
 	}
 }

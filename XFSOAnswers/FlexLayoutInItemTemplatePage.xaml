@@ -5,25 +5,9 @@
              x:Class="XFSOAnswers.FlexLayoutInItemTemplatePage">
     <ContentPage.Content>
         <StackLayout>
-            <!-- WidthRequest="160" -->
-            <StackLayout WidthRequest="180" HorizontalOptions="Center">
-                <Frame CornerRadius="10" BorderColor="Black"
-                           BackgroundColor="LightBlue" Padding="10">
-                <local:FlexLayoutImproveMeasure
-                        BindableLayout.ItemsSource="{Binding Items3}"
-                        Wrap="Wrap" BackgroundColor="LightGreen" >
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <local:LabelImproveMeasure HeightRequest="20" FontSize="Small" Text="{Binding .}"
-                                           LineBreakMode="NoWrap" MaxLines="1" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,7,0" Padding="0"/>
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
-                </local:FlexLayoutImproveMeasure>
-                </Frame>
-            </StackLayout>
-
+            <!-- labels truncated at width in 188-194 -->
             <CollectionView ItemsSource="{Binding Items}"
-                        WidthRequest="180" HorizontalOptions="Center"
+                        WidthRequest="190" HorizontalOptions="Center"
                         Margin="20" >
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
@@ -38,8 +22,8 @@
                                 BackgroundColor="LightGray" >
                                 <BindableLayout.ItemTemplate>
                                     <DataTemplate>
-                                        <local:LabelImproveMeasure FontSize="Small" Text="{Binding .}"
-                                           LineBreakMode="NoWrap" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,7,0" Padding="0"/>
+                                        <Label FontSize="Small" Text="{Binding .}"
+                                           LineBreakMode="NoWrap" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,10,0" Padding="0"/>
                                     </DataTemplate>
                                 </BindableLayout.ItemTemplate>
                             </local:FlexLayoutImproveMeasure>
