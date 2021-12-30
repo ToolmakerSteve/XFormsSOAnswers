@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,8 +23,7 @@ namespace XFSOAnswers
 	public class ListModel
 	{
 		public List<string> Items2 { get; } = new List<string> {
-			"aaa", "bbbbbbbbb", "cc", "dddd",
-			"e",
+			"aaa", "bbbbbbbbb", "cc", "dddd", "e",
 		};
 	}
 }
