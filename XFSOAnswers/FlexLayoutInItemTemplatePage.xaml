@@ -23,7 +23,7 @@
                                 <BindableLayout.ItemTemplate>
                                     <DataTemplate>
                                         <Label FontSize="Small" Text="{Binding .}"
-                                           LineBreakMode="NoWrap" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,10,0" Padding="0"/>
+                                           VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,10,0" Padding="0"/>
                                     </DataTemplate>
                                 </BindableLayout.ItemTemplate>
                             </local:FlexLayoutImproveMeasure>
