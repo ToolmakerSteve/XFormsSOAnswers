@@ -14,14 +14,6 @@ namespace XFSOAnswers
 	{
 		public static int subtotal = 123;
 
-		public static void NewSubTotal(int value)
-		{
-			subtotal = value;
-			// HACK - not recommended
-			It?.OnSubtotalChanged();
-		}
-
-		public static PaymentPage It;
 
 
 		public PaymentPage()
@@ -29,25 +21,28 @@ namespace XFSOAnswers
 			InitializeComponent();
 			BindingContext = this;
 
-			// HACK - not recommended
-			It = this;
+			MessagingCenter.Subscribe<PaymentCalc, int>(this, "NewSubTotal", (sender, value) =>
+			{
+				OnNewSubTotal(value);
+			});
 
-			DeferredSubtotalCalc();
+			TEST_DeferredSubtotalCalc();
 		}
 
 		public int subtotalProxy => subtotal;
 
-		private void OnSubtotalChanged()
+		private void OnNewSubTotal(int value)
 		{
+			subtotal = value;
 			OnPropertyChanged(nameof(subtotalProxy));
 		}
 
-		private void DeferredSubtotalCalc()
+		private void TEST_DeferredSubtotalCalc()
 		{
 			Device.BeginInvokeOnMainThread(async () =>
 			{
-				await Task.Delay(3000);
-				NewSubTotal(54321);
+				await Task.Delay(1000);
+				PaymentCalc.DoCalc();
 			});
 		}
 	}
