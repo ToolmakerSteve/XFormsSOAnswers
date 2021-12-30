@@ -32,7 +32,7 @@ namespace XFSOAnswers
 			if (force2Lines)
 			{
 				force2Lines = false;   // Clear flag.
-				var childBoundss = new List<Rectangle>();
+				//var childBoundss = new List<Rectangle>();
 				foreach (var child in Children)
 				{
 					Rectangle cb = child.Bounds;
@@ -42,9 +42,9 @@ namespace XFSOAnswers
 						const int extraW = 1;// 6;
 						var childBounds2 = new Rectangle(cb.X, cb.Y, cb.Width + extraW, cb.Height);
 						child.Layout(childBounds2);
-						var childBounds3 = child.Bounds;
+						//var childBounds3 = child.Bounds;
 					}
-					childBoundss.Add(cb);
+					//childBoundss.Add(cb);
 				}
 				_ = 0;   // TODO
 			}
