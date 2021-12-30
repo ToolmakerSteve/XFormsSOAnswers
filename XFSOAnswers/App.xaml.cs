@@ -23,7 +23,9 @@ namespace XFSOAnswers
 			//ReloadMyPageDeferred(10.0, 6);
 
 			//ForceLightTheme();
-			SetStartPage();
+			//SetStartPage();
+
+			MainPage = new PaymentPage();
 		}
 
 		public static void ForceLightTheme()

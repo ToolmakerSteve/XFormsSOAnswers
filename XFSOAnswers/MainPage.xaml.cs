@@ -46,7 +46,10 @@ namespace XFSOAnswers
 		private void Test()
 		{
 			//Device.StartTimer(...);
+			var xc = Constraint.Constant(160);
 		}
+
+		Constraint XC => Constraint.Constant(X);
 
         static Random Rand = new Random();
 
