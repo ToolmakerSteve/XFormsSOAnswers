@@ -2,11 +2,26 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:local="clr-namespace:XFSOAnswers"
              x:Class="XFSOAnswers.App">
     <Application.Resources>
 		<Style TargetType="ContentPage" ApplyToDerivedTypes="True">
 			<Setter Property="ios:Page.UseSafeArea" Value="True"/>
 		</Style>
         <!--<x:Double x:Key="MyFontSize">0</x:Double>-->
+        
+        <DataTemplate x:Key="FirstCell">
+            <Label Text="Some text"/>
+        </DataTemplate>
+
+        <DataTemplate x:Key="SecondCell">
+            <Label Text="Some other text"/>
+        </DataTemplate>
+
+        <local:CustomDataTemplateSelector
+    x:Key="CustomDataTemplateSelector"
+    SecondTemplate="{StaticResource SecondCell}"
+    FirstTemplate="{StaticResource FirstCell}"/>
+        
     </Application.Resources>
 </Application>
