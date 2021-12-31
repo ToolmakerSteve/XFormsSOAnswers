@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSOAnswers.AbsoluteSpritesBindingPage">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto, *" BackgroundColor="Pink" >
+            <Label Grid.Row="0" Text="The Game" HorizontalOptions="Center" TextColor="Black" />
+            <AbsoluteLayout Grid.Row="1" VerticalOptions="Fill"
+                            BackgroundColor="LightBlue" Margin="8,0,8,8">
+                <Label Text="bb"  AbsoluteLayout.LayoutBounds="50, 10" />
+            </AbsoluteLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

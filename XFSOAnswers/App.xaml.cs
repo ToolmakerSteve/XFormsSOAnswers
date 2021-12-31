@@ -28,7 +28,7 @@ namespace XFSOAnswers
 
 		public void SetStartPage()
 		{
-			MainPage = new MainPage();
+			//MainPage = new MainPage();
 			//MainPage = new NestedScrollGrid();
 			//MainPage = new TwoLayoutPage();
 
@@ -54,6 +54,8 @@ namespace XFSOAnswers
 			//MainPage = new NavigationPage(new TitleViewPage());
 			//MainPage = new CollectionViewWithCellButtonPage();
 			//MainPage = new GroupedCollectionViewPage();
+
+			MainPage = new AbsoluteSpritesBindingPage();
 		}
 
 		public static void ForceLightTheme()
