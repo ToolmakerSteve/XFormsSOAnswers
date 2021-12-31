@@ -13,12 +13,9 @@ namespace XFSOAnswers
 			it.NewSubTotal(5432);
 		}
 
-
 		public void NewSubTotal(int value)
 		{
-			//MessagingCenter.Send(this, "NewSubTotal");
 			MessagingCenter.Send(this, "NewSubTotal", value);
 		}
-
 	}
 }

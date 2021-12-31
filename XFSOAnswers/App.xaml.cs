@@ -25,7 +25,10 @@ namespace XFSOAnswers
 			//ForceLightTheme();
 			//SetStartPage();
 
-			MainPage = new PaymentPage();
+			//MainPage = new PaymentPage();
+			//MainPage = new NavigationPage(new TitleViewPage());
+			//MainPage = new CollectionViewWithCellButtonPage();
+			MainPage = new GroupedCollectionViewPage();
 		}
 
 		public static void ForceLightTheme()

@@ -33,6 +33,15 @@ namespace XFSOAnswers
 
 	public class Model
 	{
-		public string Name { get; set; } = "a";
+		public string Name { get; set; }
+
+		public Model() : this("a")
+		{
+		}
+
+		public Model(string name)
+		{
+			Name = name;
+		}
 	}
 }
