@@ -4,6 +4,11 @@
              x:Class="XFSOAnswers.MainPage">
     <StackLayout>
         <Label Text="Test"/>
+        <Grid Padding="2" BackgroundColor="Red" HeightRequest="90" WidthRequest="90">
+            <Grid HorizontalOptions="Center" HeightRequest="86" WidthRequest="86" BackgroundColor="Yellow">
+                <Label Text="Hey There" BackgroundColor="Green"></Label>
+            </Grid>
+        </Grid>
         <Grid ColumnDefinitions="50,50" RowDefinitions="50,50">
             <Image Grid.Row="0" Grid.Column="0" Source="{Binding Source1A}" BackgroundColor="Red"/>
             <Image Grid.Row="0" Grid.Column="1" Source="{Binding Source1B}" BackgroundColor="Green"/>

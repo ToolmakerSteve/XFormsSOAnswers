@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFSOAnswers"
              x:Class="XFSOAnswers.GroupedCollectionViewPage">
     <ContentPage.Content>
-        <CollectionView x:Name="clv" ItemsSource="{Binding Groups}" IsGrouped="True" >
+        <local:CollectionViewFixMeasureFirst x:Name="clv" ItemsSource="{Binding Groups}" IsGrouped="True"
+                        ItemSizingStrategy="MeasureFirstItem" SelectionMode="Single" >
             <CollectionView.GroupHeaderTemplate>
                 <DataTemplate>
                     <Label Text="{Binding Name}"
@@ -20,6 +22,6 @@
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>
+        </local:CollectionViewFixMeasureFirst>
     </ContentPage.Content>
 </ContentPage>

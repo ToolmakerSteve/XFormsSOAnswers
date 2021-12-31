@@ -23,24 +23,12 @@ namespace XFSOAnswers
 			//ReloadMyPageDeferred(10.0, 6);
 
 			//ForceLightTheme();
-			//SetStartPage();
-
-			//MainPage = new PaymentPage();
-			//MainPage = new NavigationPage(new TitleViewPage());
-			//MainPage = new CollectionViewWithCellButtonPage();
-			MainPage = new GroupedCollectionViewPage();
-		}
-
-		public static void ForceLightTheme()
-		{
-			var theme = Application.Current.UserAppTheme;
-			Application.Current.UserAppTheme = OSAppTheme.Light;
-			var theme2 = Application.Current.UserAppTheme;
+			SetStartPage();
 		}
 
 		public void SetStartPage()
 		{
-			//MainPage = new MainPage();
+			MainPage = new MainPage();
 			//MainPage = new NestedScrollGrid();
 			//MainPage = new TwoLayoutPage();
 
@@ -60,7 +48,19 @@ namespace XFSOAnswers
 			//MainPage = new MyAbsoluteLayoutPage();
 			//MainPage = new StartPage();
 			//MainPage = new CollectionViewWithCellButtonPage();
-			MainPage = new FlexLayoutInItemTemplatePage();
+			//MainPage = new FlexLayoutInItemTemplatePage();
+
+			//MainPage = new PaymentPage();
+			//MainPage = new NavigationPage(new TitleViewPage());
+			//MainPage = new CollectionViewWithCellButtonPage();
+			//MainPage = new GroupedCollectionViewPage();
+		}
+
+		public static void ForceLightTheme()
+		{
+			var theme = Application.Current.UserAppTheme;
+			Application.Current.UserAppTheme = OSAppTheme.Light;
+			var theme2 = Application.Current.UserAppTheme;
 		}
 
 		private void Test()

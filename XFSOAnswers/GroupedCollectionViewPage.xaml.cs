@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 
 namespace XFSOAnswers
 {
+	// ----- DID NOT SUCCEED in finding a fix to MeasureFirstItem when Grouped. -----
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class GroupedCollectionViewPage : ContentPage
 	{
