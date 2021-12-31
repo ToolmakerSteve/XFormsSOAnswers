@@ -10,7 +10,7 @@
 		</Style>
         <!--<x:Double x:Key="MyFontSize">0</x:Double>-->
         
-        <DataTemplate x:Key="FirstCell">
+        <!--<DataTemplate x:Key="FirstCell">
             <Label Text="Some text"/>
         </DataTemplate>
 
@@ -19,9 +19,11 @@
         </DataTemplate>
 
         <local:CustomDataTemplateSelector
-    x:Key="CustomDataTemplateSelector"
-    SecondTemplate="{StaticResource SecondCell}"
-    FirstTemplate="{StaticResource FirstCell}"/>
-        
+            x:Key="CustomDataTemplateSelector"
+            SecondTemplate="{StaticResource SecondCell}"
+            FirstTemplate="{StaticResource FirstCell}"/>-->
+
+        <ResourceDictionary Source="../DataTemplates.xaml"/>
+
     </Application.Resources>
 </Application>
