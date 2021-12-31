@@ -18,7 +18,7 @@ using Picker = Xamarin.Forms.Picker;
 namespace Xamarin.Forms.Platform.Android.AppCompat
 {
 
-	public class MyPickerRenderer : PickerRendererBase<EditText>
+	public class MyPickerRenderer : PickerRendererBase2<EditText>
 	{
 		TextColorSwitcher _textColorSwitcher;
 		TextColorSwitcher _hintColorSwitcher;
@@ -57,25 +57,26 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 
 		protected override void UpdateGravity()
 		{
-			EditText.Gravity = Element.HorizontalTextAlignment.ToHorizontalGravityFlags() | Element.VerticalTextAlignment.ToVerticalGravityFlags();
+			GravityFlags gravityFlags = Element.HorizontalTextAlignment.ToHorizontalGravityFlags();
+			EditText.Gravity = gravityFlags | Element.VerticalTextAlignment.ToVerticalGravityFlags();
 		}
 	}
 
-	public abstract class PickerRendererBase<TControl> : ViewRenderer<Picker, TControl>, IPickerRenderer
+	public abstract class PickerRendererBase2<TControl> : ViewRenderer<Picker, TControl>, IPickerRenderer
 			where TControl : global::Android.Views.View
 	{
 		AlertDialog _dialog;
 		bool _disposed;
 		//EntryAccessibilityDelegate _pickerAccessibilityDelegate;
 
-		public PickerRendererBase(Context context) : base(context)
+		public PickerRendererBase2(Context context) : base(context)
 		{
 			AutoPackage = false;
 		}
 
 		[Obsolete("This constructor is obsolete as of version 2.5. Please use PickerRenderer(Context) instead.")]
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		public PickerRendererBase()
+		public PickerRendererBase2()
 		{
 			AutoPackage = false;
 		}
