@@ -27,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
     <PackageReference Include="Sharpnado.Tabs" Version="2.2.0" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="1.3.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
@@ -35,6 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="SpritesPage.xaml.cs">
+      <DependentUpon>SpritesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="MyAbsoluteLayoutPage.xaml.cs">
       <DependentUpon>MyAbsoluteLayoutPage.xaml</DependentUpon>
     </Compile>
@@ -50,7 +52,7 @@
     <EmbeddedResource Update="AbsoluteLayoutPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="AbsoluteSpritesBindingPage.xaml">
+    <EmbeddedResource Update="SpritesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="CollectionViewWithCellButtonPage.xaml">

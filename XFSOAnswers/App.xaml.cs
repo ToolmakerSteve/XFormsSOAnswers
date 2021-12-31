@@ -55,7 +55,7 @@ namespace XFSOAnswers
 			//MainPage = new CollectionViewWithCellButtonPage();
 			//MainPage = new GroupedCollectionViewPage();
 
-			MainPage = new AbsoluteSpritesBindingPage();
+			MainPage = new SpritesPage();
 		}
 
 		public static void ForceLightTheme()

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSOAnswers.SpritesPage">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto, *" BackgroundColor="Pink" >
+            <Label Grid.Row="0" Text="The Game" HorizontalOptions="Center" TextColor="Black" />
+            <RelativeLayout x:Name="GameArea" Grid.Row="1" VerticalOptions="Fill"
+                            BindableLayout.ItemsSource="{Binding Sprites}"
+                            BackgroundColor="LightBlue" Margin="8,0,8,8">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <!--RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={Binding X}}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={Binding Y}}"-->
+                        <Label Text="{Binding Name}"
+                               RelativeLayout.XConstraint="{Binding XConstraint}"
+                               RelativeLayout.YConstraint="{Binding YConstraint}"
+                               />
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </RelativeLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
