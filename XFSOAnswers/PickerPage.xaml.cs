@@ -16,5 +16,23 @@ namespace XFSOAnswers
 		{
 			InitializeComponent();
 		}
+
+		protected override void OnAppearing()
+		{
+			base.OnAppearing();
+
+			MessagingCenter.Subscribe<App>(this, "WakeUp", (sender) =>
+			{
+				// Do something here.
+			});
+		}
+
+		protected override void OnDisappearing()
+		{
+			base.OnDisappearing();
+
+			MessagingCenter.Unsubscribe<App>(this, "WakeUp");
+		}
+
 	}
 }

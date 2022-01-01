@@ -56,7 +56,9 @@ namespace XFSOAnswers
 			//MainPage = new GroupedCollectionViewPage();
 
 			//MainPage = new SpritesPage();
-			MainPage = new PickerPage();
+			//MainPage = new PickerPage();
+			MainPage = new MapPage();
+			//MainPage = new PinPageCode();
 		}
 
 		public static void ForceLightTheme()
@@ -130,6 +132,7 @@ namespace XFSOAnswers
 
         protected override void OnResume()
         {
-        }
-    }
+			MessagingCenter.Send(this, "WakeUp");
+		}
+	}
 }

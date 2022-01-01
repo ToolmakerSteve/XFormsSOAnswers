@@ -18,6 +18,7 @@ namespace XFSOAnswers.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+			//Xamarin.FormsMaps.Init(this, savedInstanceState);
 
 			App app = new App();
 			//app.UserAppTheme = Xamarin.Forms.OSAppTheme.Light;
