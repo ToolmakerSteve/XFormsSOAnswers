@@ -70,11 +70,11 @@ namespace XFSOAnswers.Droid
 		{
 			if (Element != null)
 			{
-				TestPage.Container view = Element as TestPage.Container;
-				if (view != null)
-				{
-					view.HandlerPosUpdated -= UpdatePos;
-				}
+				//TestPage.Container view = Element as TestPage.Container;
+				//if (view != null)
+				//{
+				//	view.HandlerPosUpdated -= UpdatePos;
+				//}
 			}
 
 		}

@@ -59,7 +59,8 @@ namespace XFSOAnswers
 			//MainPage = new PickerPage();
 			//MainPage = new MapPage();
 			//MainPage = new PinPageCode();
-			MainPage = new SharpnadoTabsPage();
+			//MainPage = new SharpnadoTabsPage();
+			MainPage = new OverlappingShapeButtonsPage();
 		}
 
 		public static void ForceLightTheme()

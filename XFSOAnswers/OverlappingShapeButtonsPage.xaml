@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSOAnswers.OverlappingShapeButtonsPage">
+    <ContentPage.Resources>
+        <Style TargetType="BoxView">
+            <!-- Uncomment, to see where OnTapped1 boxes are. -->
+            <!--<Setter Property="BackgroundColor" Value="Red"/>-->
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <AbsoluteLayout InputTransparent="True">
+                <Polygon Points="0,0 80,0 0,60" Fill="Green" />
+                <Polygon Points="80,0 80,60 0,60" Fill="Pink" />
+            </AbsoluteLayout>
+            <Grid RowDefinitions="20,20,20" ColumnDefinitions="20,20,20,20"
+                  RowSpacing="0" ColumnSpacing="0">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapped2" />
+                </Grid.GestureRecognizers>
+                <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapped1" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapped1" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapped1" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
