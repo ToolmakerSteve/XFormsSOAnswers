@@ -12,7 +12,7 @@ namespace XFSOAnswers
         public App()
 		{
 			InitializeComponent();
-			//Sharpnado.Tabs.Initializer.Initialize(false, false);
+			Sharpnado.Tabs.Initializer.Initialize(false, false);
 
 			//var fontsize = Application.Current.Resources["MyFontSize"];
 			//Application.Current.Resources["MyFontSize"] = 50.0;
@@ -57,8 +57,9 @@ namespace XFSOAnswers
 
 			//MainPage = new SpritesPage();
 			//MainPage = new PickerPage();
-			MainPage = new MapPage();
+			//MainPage = new MapPage();
 			//MainPage = new PinPageCode();
+			MainPage = new SharpnadoTabsPage();
 		}
 
 		public static void ForceLightTheme()

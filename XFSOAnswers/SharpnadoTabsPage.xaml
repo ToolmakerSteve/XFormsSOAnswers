@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sho="http://sharpnado.com"
+             xmlns:local="clr-namespace:XFSOAnswers"
+             x:DataType="local:SharpnadoTabsPage"
+             x:Class="XFSOAnswers.SharpnadoTabsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <sho:TabHostView x:Name="TabHostLogo"
+                                 WidthRequest="200"
+                                 HeightRequest="60"
+                                 Margin="0"
+                                 Padding="0,20,0,0"
+                                 HorizontalOptions="Fill"
+                                 VerticalOptions="Start"
+                                 BackgroundColor="Pink"
+                                 IsSegmented="False"
+                                 Orientation="Horizontal"
+                                 TabType="Fixed"
+                             SelectedTabIndexChanged="TabHostLogo_SelectedTabIndexChanged"
+                             >
+
+                <sho:TabHostView.Tabs>
+
+                    <sho:BottomTabItem Label="AAA" BackgroundColor="Violet" />
+                    <sho:BottomTabItem Label="BBB" BackgroundColor="Orange" />
+
+                    <!-- ButtonCircleSize="40" CornerRadius="40" Scale="2.5" Margin="0,0,0,15" TranslationY="-20" -->
+                    <sho:TabButton x:Name="TabButton"
+                                       ButtonBackgroundColor="Gray"
+                                       ButtonCircleSize="40"
+                                   Scale="2.0"
+                                       TapCommand="{Binding ProfileViewCommand}"
+                                       Margin="0,0,0,0"
+                                        />
+                    <sho:BottomTabItem Label="CCC" BackgroundColor="Red" />
+                    <sho:BottomTabItem Label="DDDD" BackgroundColor="Green" />
+
+                </sho:TabHostView.Tabs>
+            </sho:TabHostView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
