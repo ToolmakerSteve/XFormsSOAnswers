@@ -68,6 +68,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomFrameRenderer.cs" />
     <Compile Include="EntryRenderer.cs" />
     <Compile Include="EditorRenderer.cs" />
     <Compile Include="MyPickerRenderer.cs" />
