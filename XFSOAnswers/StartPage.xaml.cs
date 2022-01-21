@@ -36,7 +36,7 @@ namespace XFSOAnswers
 		{
 			Device.BeginInvokeOnMainThread(() =>
 			{
-				App.Current.MainPage = new MyAbsoluteLayoutPage();
+				App.Current.MainPage = new FilePickerPage();
 			});
 		}
 	}

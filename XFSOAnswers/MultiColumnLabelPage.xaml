@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFSOAnswers"
+             x:Class="XFSOAnswers.MultiColumnLabelPage">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,*" ColumnDefinitions="*,*,*,*,*,*,*,*" ColumnSpacing="0">
+            <local:LabelFix Grid.Column="0" Grid.ColumnSpan="8" Text="Once upon a time there was a princess who lived in a castle at the top of a glass hill. Youngest"
+                            HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="18" BackgroundColor="Pink" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

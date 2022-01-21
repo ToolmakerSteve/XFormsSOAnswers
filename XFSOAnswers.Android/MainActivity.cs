@@ -52,5 +52,15 @@ namespace XFSOAnswers.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-    }
+
+		protected override void OnPause()
+		{
+			base.OnPause();
+		}
+
+		protected override void OnResume()
+		{
+			base.OnResume();
+		}
+	}
 }

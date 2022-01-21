@@ -46,7 +46,6 @@ namespace XFSOAnswers
 			//MainPage = new EvenlySpaceItemsScrolling();
 
 			//MainPage = new MyAbsoluteLayoutPage();
-			//MainPage = new StartPage();
 			//MainPage = new CollectionViewWithCellButtonPage();
 			//MainPage = new FlexLayoutInItemTemplatePage();
 
@@ -60,7 +59,11 @@ namespace XFSOAnswers
 			//MainPage = new MapPage();
 			//MainPage = new PinPageCode();
 			//MainPage = new SharpnadoTabsPage();
-			MainPage = new OverlappingShapeButtonsPage();
+			//MainPage = new OverlappingShapeButtonsPage();
+			//MainPage = new FilePickerPage();
+			//MainPage = new StartPage();
+			MainPage = new MultiColumnLabelPage();
+			//MainPage = new GridTapRecognizersPage();
 		}
 
 		public static void ForceLightTheme()
