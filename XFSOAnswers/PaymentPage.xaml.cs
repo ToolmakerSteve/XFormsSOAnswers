@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -48,7 +49,7 @@ namespace XFSOAnswers
 
 		private void TEST_DeferredSubtotalCalc()
 		{
-			Device.BeginInvokeOnMainThread(async () =>
+			MainThread.BeginInvokeOnMainThread(async () =>
 			{
 				await Task.Delay(2000);
 				PaymentCalc.DoCalc();

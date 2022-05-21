@@ -16,7 +16,7 @@ namespace XFSOAnswers
 
 		private void PickFileButton_Clicked(object sender, EventArgs e)
 		{
-			Device.BeginInvokeOnMainThread(async () =>
+			MainThread.BeginInvokeOnMainThread(async () =>
 			{
 				await PickAndShow(PickOptions.Images);
 			});

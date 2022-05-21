@@ -28,7 +28,6 @@ namespace XFSOAnswers
 
 		public void SetStartPage()
 		{
-			//MainPage = new MainPage();
 			//MainPage = new NestedScrollGrid();
 			//MainPage = new TwoLayoutPage();
 
@@ -62,8 +61,11 @@ namespace XFSOAnswers
 			//MainPage = new OverlappingShapeButtonsPage();
 			//MainPage = new FilePickerPage();
 			//MainPage = new StartPage();
-			MainPage = new MultiColumnLabelPage();
+			//MainPage = new MultiColumnLabelPage();
 			//MainPage = new GridTapRecognizersPage();
+			//MainPage = new MainPage();
+			//MainPage = new CollectionGridLayoutPage();
+			MainPage = new PeriodicInteractPage();
 		}
 
 		public static void ForceLightTheme()
@@ -77,7 +79,7 @@ namespace XFSOAnswers
 		{
 			//UnionStruct.Test1();
 
-			//Device.BeginInvokeOnMainThread(async () =>
+			//MainThread.BeginInvokeOnMainThread(async () =>
 			//{
 			//	await System.Threading.Tasks.Task.Delay(200);
 			//	var names = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames();
@@ -89,7 +91,7 @@ namespace XFSOAnswers
 		//	get { return _SearchText; }
 		//	set {
 		//		_SearchText = value;
-		//		Device.BeginInvokeOnMainThread(async () => {
+		//		MainThread.BeginInvokeOnMainThread(async () => {
 		//			await OnSearchTextChanged();
 		//		});
 		//		OnPropertyChanged(nameof(SearchText));
@@ -112,7 +114,7 @@ namespace XFSOAnswers
 
 		//public void ReloadMyPageDeferred(double newFontSize, int seconds)
 		//{
-		//	Device.BeginInvokeOnMainThread(async () => {
+		//	MainThread.BeginInvokeOnMainThread(async () => {
 		//		await GetAutoComplete(value);
 		//		await Task.Delay(seconds * 1000);
 		//		LoadMyPage(newFontSize);

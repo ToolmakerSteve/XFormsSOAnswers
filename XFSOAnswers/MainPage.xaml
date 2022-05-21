@@ -2,18 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XFSOAnswers.MainPage">
-    <StackLayout>
-        <Label Text="Test"/>
-        <Grid Padding="2" BackgroundColor="Red" HeightRequest="90" WidthRequest="90">
-            <Grid HorizontalOptions="Center" HeightRequest="86" WidthRequest="86" BackgroundColor="Yellow">
-                <Label Text="Hey There" BackgroundColor="Green"></Label>
+    <Frame BackgroundColor="HotPink" Padding="8" >
+        <StackLayout BackgroundColor="Blue">
+            <Label Text="Test"/>
+            <Image Source="{Binding PickerSource}" WidthRequest="200" HeightRequest="80" BackgroundColor="Gray" />
+            <Grid Padding="2" BackgroundColor="Red" HeightRequest="90" WidthRequest="90">
+                <Grid HorizontalOptions="Center" HeightRequest="86" WidthRequest="86" BackgroundColor="Yellow">
+                    <Label Text="Hey There" BackgroundColor="Green"></Label>
+                </Grid>
             </Grid>
-        </Grid>
-        <Grid ColumnDefinitions="50,50" RowDefinitions="50,50">
-            <Image Grid.Row="0" Grid.Column="0" Source="{Binding Source1A}" BackgroundColor="Red"/>
-            <Image Grid.Row="0" Grid.Column="1" Source="{Binding Source1B}" BackgroundColor="Green"/>
-            <Image Grid.Row="1" Grid.Column="0" Source="{Binding Source2A}" BackgroundColor="Blue"/>
-            <Image Grid.Row="1" Grid.Column="1" Source="{Binding Source2B}" BackgroundColor="Yellow"/>
-        </Grid>
-    </StackLayout>
+            <Grid ColumnDefinitions="50,50" RowDefinitions="50,50">
+                <Image Grid.Row="0" Grid.Column="0" Source="{Binding Source1A}" BackgroundColor="Red"/>
+                <Image Grid.Row="0" Grid.Column="1" Source="{Binding Source1B}" BackgroundColor="Green"/>
+                <Image Grid.Row="1" Grid.Column="0" Source="{Binding Source2A}" BackgroundColor="Blue"/>
+                <Image Grid.Row="1" Grid.Column="1" Source="{Binding Source2B}" BackgroundColor="Yellow"/>
+            </Grid>
+        </StackLayout>
+
+   </Frame>
 </ContentPage>

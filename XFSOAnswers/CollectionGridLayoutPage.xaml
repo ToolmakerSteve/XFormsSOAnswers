@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSOAnswers.CollectionGridLayoutPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <CollectionView x:Name="myCollection" ItemsSource="{Binding Profile.Items}" ItemsLayout="VerticalGrid, 3"
+                            WidthRequest="210" HeightRequest="210" HorizontalOptions="Center" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="DarkBlue" Padding="5" >
+                            <ImageButton Source="{Binding .}"
+                                         Command="{Binding BindingContext.HandleImage, Source={x:Reference myCollection}}"
+                                         CommandParameter="{Binding .}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

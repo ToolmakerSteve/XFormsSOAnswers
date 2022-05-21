@@ -4,6 +4,7 @@
              x:Class="XFSOAnswers.StartPage">
     <ContentPage.Content>
         <StackLayout>
+            <Entry Text="{Binding Text}" Keyboard="Numeric" TextChanged="Entry_TextChanged" />
             <Button Text="Set Light Theme" Command="{Binding Button1Command}" />
             <Button Text="Go to Page" Command="{Binding Button2Command}" />
         </StackLayout>

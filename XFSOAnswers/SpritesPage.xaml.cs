@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -30,7 +31,7 @@ namespace XFSOAnswers
 		private void AnimationLoop()
 		{
 			// Animation test.
-			Device.BeginInvokeOnMainThread(async () =>
+			MainThread.BeginInvokeOnMainThread(async () =>
 			{
 				// HACK to make sure page is displayed before begin animation loop.
 				await Task.Delay(500);

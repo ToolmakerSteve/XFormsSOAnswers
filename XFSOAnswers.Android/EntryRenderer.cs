@@ -2,6 +2,7 @@
 using Android.Views.InputMethods;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
@@ -35,7 +36,7 @@ namespace XFSOAnswers.Droid
 				if (this.HasFocus) {
 					Android.Util.Log.Warn("-----", $"hasFocus={this.HasFocus} -----");
 
-					Device.BeginInvokeOnMainThread(async () => {
+					MainThread.BeginInvokeOnMainThread(async () => {
 						await Task.Delay(1);
 						Android.Util.Log.Warn("-----", $"HideSoftInputFromWindow -----");
 						InputMethodManager imm = (InputMethodManager)this.Context.GetSystemService(Context.InputMethodService);

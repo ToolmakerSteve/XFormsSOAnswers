@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -72,7 +73,7 @@ namespace XFSOAnswers
 			get => _selectedContact;
 			set
 			{
-				Device.BeginInvokeOnMainThread(async () =>
+				MainThread.BeginInvokeOnMainThread(async () =>
 				{
 					await DelayedSetSelectedContact(value);
 				});

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -29,7 +29,7 @@ namespace XFSOAnswers
 			var children = tb.Children;
 			if (children.Count > 0)
 			{
-				Device.BeginInvokeOnMainThread(() =>
+				MainThread.BeginInvokeOnMainThread(() =>
 				{
 					var tbScale = tb.Scale;
 					var tbBounds = tb.Bounds;
